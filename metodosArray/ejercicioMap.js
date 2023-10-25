@@ -273,23 +273,23 @@ let products = [
   3.- crear una nueva lista que contenga los productos con su descripción limitada a 10 palabras
   */
 
-//   const priceMxn = (productsArray) =>{
-//     let result = productsArray.map((product)=>{
-//       return {...product, price:(product.price * 18.26).toFixed(2)}
-//     })
-//     console.log(result)
-//   }
+  const priceMxn = (productsArray) =>{
+    let result = productsArray.map((product)=>{
+      return {...product, price:(product.price * 18.26).toFixed(2)}
+    })
+    console.log(result)
+  }
 
-//   priceMxn(products)
+  priceMxn(products)
 
-//   const productNames = (productsArray) =>{
-//     let result = productsArray.map((productName)=>{
-//       return {title:productName.title}
-//     })
-//     console.log(result)
-//   }
+  const productNames = (productsArray) =>{
+    let result = productsArray.map((productName)=>{
+      return {title:productName.title}
+    })
+    console.log(result)
+  }
 
-// productNames(products)
+productNames(products)
 
 const descriptionLimited = (productsArray) =>{
   let result = productsArray.map((productDescription)=>{
@@ -300,5 +300,3 @@ const descriptionLimited = (productsArray) =>{
 
 descriptionLimited(products)
 
-// ${student.lastName.split(" ")[1].slice(0,1) + "."}
-// " " || "," || "-" || "/"
