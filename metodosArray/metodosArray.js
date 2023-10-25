@@ -9,7 +9,7 @@ const printKodersInitial = (kodersArray) =>{
 printKodersInitial(koders);
 
 let students = [
-    {name:"Rodolfo", lastName: "Ramirez Morales"},
+    {name:"Rodolfo Roman", lastName: "Ramirez Morales"},
     {name:"Karla", lastName: "Hernandez Lorenzo"},
     {name:"Angela", lastName: "Garcia Garcia"},
     {name:"Armando", lastName: "García Miranda"},
