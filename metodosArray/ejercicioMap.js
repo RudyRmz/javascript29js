@@ -273,14 +273,14 @@ let products = [
   3.- crear una nueva lista que contenga los productos con su descripción limitada a 10 palabras
   */
 
-  const priceMxn = (productsArray) =>{
-    let result = productsArray.map((product)=>{
-      return {...product, price:(product.price * 18.26).toFixed(2)}
-    })
-    console.log(result)
-  }
+//   const priceMxn = (productsArray) =>{
+//     let result = productsArray.map((product)=>{
+//       return {...product, price:(product.price * 18.26).toFixed(2)}
+//     })
+//     return result
+//   }
 
-  priceMxn(products)
+//   priceMxn(products)
 
   const productNames = (productsArray) =>{
     let result = productsArray.map((productName)=>{
@@ -291,12 +291,12 @@ let products = [
 
 productNames(products)
 
-const descriptionLimited = (productsArray) =>{
-  let result = productsArray.map((productDescription)=>{
-    return {...productDescription, description: productDescription.description.split(" ",10).join(" ")}
-  })
-  console.log(result)
-}
+// const descriptionLimited = (productsArray) =>{
+//   let result = productsArray.map((productDescription)=>{
+//     return {...productDescription, description: productDescription.description.split(" ",10).join(" ")}
+//   })
+//   console.log(result)
+// }
 
-descriptionLimited(products)
+// descriptionLimited(products)
 
