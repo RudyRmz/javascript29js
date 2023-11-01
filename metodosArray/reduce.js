@@ -10,3 +10,4 @@ const getTotalSum = (numbersArray) => {
 let totalSum = getTotalSum(numbers)
 
 console.log(totalSum)
+
