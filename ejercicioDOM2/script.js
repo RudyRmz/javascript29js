@@ -72,13 +72,18 @@ const createUserCard = (usersArray = users)=>{
     paragraphEmail.classList.add("card-text")
     paragraphEmail.innerText = "..."
 
+    let deleteButton = document.createElement("button")
+    deleteButton.setAttribute("type","button")
+    deleteButton.classList.add("btn","btn-danger")
+    deleteButton.innerText = "Borrar"
+
     usersArray.forEach(user => {
         imgCard.setAttribute("src", `${user.photo}`)
         cardtitle.innerText = `${user.name}`
         paragraphEmail.innerText = `${user.email}`
     });
 
-    divCard2.append(cardtitle, paragraphEmail)
+    divCard2.append(cardtitle, paragraphEmail,deleteButton)
     divCard1.append(imgCard, divCard2)
     divCard.append(divCard1)
     
