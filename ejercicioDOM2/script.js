@@ -51,6 +51,9 @@ buttonClean.addEventListener("click", ()=>{
 })
 
 const createUserCard = (usersArray = users)=>{
+    let divCard = document.createElement("div")
+    divCard.classList.add("col")
+
     let divCard1 = document.createElement("div")
     divCard1.classList.add("card", "h-100")
 
@@ -77,8 +80,9 @@ const createUserCard = (usersArray = users)=>{
 
     divCard2.append(cardtitle, paragraphEmail)
     divCard1.append(imgCard, divCard2)
+    divCard.append(divCard1)
     
-    return divCard1
+    return divCard
 }
 
 // createUserCard(users)
