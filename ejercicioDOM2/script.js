@@ -55,7 +55,7 @@ const createUserCard = (usersArray = users)=>{
     divCard.classList.add("col")
 
     let divCard1 = document.createElement("div")
-    divCard1.classList.add("card", "h-100")
+    divCard1.classList.add("card", "h-100", "shadow-lg", "bg-body-tertiary", "rounded")
 
     let imgCard = document.createElement("img")
     imgCard.classList.add("card-img-top")
@@ -76,6 +76,12 @@ const createUserCard = (usersArray = users)=>{
     deleteButton.setAttribute("type","button")
     deleteButton.classList.add("btn","btn-danger")
     deleteButton.innerText = "Borrar"
+    deleteButton.id = "delete-button"
+
+    deleteButton.addEventListener("click", ()=>{
+        alert("diste click al boton borrar")
+    })
+    
 
     usersArray.forEach(user => {
         imgCard.setAttribute("src", `${user.photo}`)
@@ -87,8 +93,11 @@ const createUserCard = (usersArray = users)=>{
     divCard1.append(imgCard, divCard2)
     divCard.append(divCard1)
     
+    
     return divCard
 }
+
+
 
 // createUserCard(users)
 
@@ -99,5 +108,11 @@ const printCardUser = () => {
     cardContainer.append(cardEvent);
 };
 
-
+// const printAllUsers = (usersList = users) => {
+//     let cardContainer = document.getElementById("card-container");
+//     cardContainer.innerHTML = "";
+//     usersList.forEach((user) => {
+//     printCardUser(user);
+//     });
+// };
 
