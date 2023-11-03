@@ -77,21 +77,27 @@ const createUserCard = (usersArray = users)=>{
     deleteButton.classList.add("btn","btn-danger")
     deleteButton.innerText = "Borrar"
     deleteButton.id = "delete-button"
-
-    deleteButton.addEventListener("click", ()=>{
-        alert("diste click al boton borrar")
-    })
+    deleteButton.dataset.persona = "."
+    
     
 
-    usersArray.forEach(user => {
+    usersArray.forEach((user, index) => {
         imgCard.setAttribute("src", `${user.photo}`)
         cardtitle.innerText = `${user.name}`
         paragraphEmail.innerText = `${user.email}`
+        deleteButton.dataset.persona = `${index}`
     });
 
     divCard2.append(cardtitle, paragraphEmail,deleteButton)
     divCard1.append(imgCard, divCard2)
     divCard.append(divCard1)
+
+    deleteButton.addEventListener("click", (event)=>{
+        // alert("diste click al boton borrar")
+        const personToRemove = event.target.dataset.persona;
+        users.splice(Number(personToRemove), 1)
+        divCard.remove()
+    })
     
     
     return divCard
@@ -107,6 +113,8 @@ const printCardUser = () => {
     let cardEvent = createUserCard(users);
     cardContainer.append(cardEvent);
 };
+
+
 
 // const printAllUsers = (usersList = users) => {
 //     let cardContainer = document.getElementById("card-container");
