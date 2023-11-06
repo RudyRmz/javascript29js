@@ -85,7 +85,7 @@ const createUserCard = (usersArray = users)=>{
         imgCard.setAttribute("src", `${user.photo}`)
         cardtitle.innerText = `${user.name}`
         paragraphEmail.innerText = `${user.email}`
-        deleteButton.dataset.persona = `${index}`
+        deleteButton.dataset.persona = `${index}`//`${user.id}` 
     });
 
     divCard2.append(cardtitle, paragraphEmail,deleteButton)
@@ -98,6 +98,29 @@ const createUserCard = (usersArray = users)=>{
         users.splice(Number(personToRemove), 1)
         divCard.remove()
     })
+
+    // deleteButton.addEventListener("click", (event, usersArray = users)=>{
+    //     let personToRemove = event.target.dataset.persona
+    //     console.log("le diste click a borrar")
+    //     console.log(personToRemove)
+    //     console.log(event)
+    //     for (let i = 0; i < usersArray.length; i++) {
+    //         if (usersArray[i].id === personToRemove) {
+    //             usersArray.splice(i, 1);
+    //             //break; // Detenemos el bucle una vez que se elimina el elemento
+    //         }
+    //     }
+    //     divCard.remove()
+    //     console.log(usersArray)
+    // })
+    // function eliminarYReemplazarPorId(array, idAEliminar) {
+    //     for (let i = 0; i < array.length; i++) {
+    //         if (array[i].id === idAEliminar) {
+    //             array.splice(i, 1);
+    //             break; // Detenemos el bucle una vez que se elimina el elemento
+    //         }
+    //     }
+    // }
     
     
     return divCard
