@@ -2,12 +2,17 @@ let colores = ["amarillo", "azul", "rojo", "blanco", "verde"]
 let colorRandom = Math.floor(Math.random()*colores.length)
 let resultadoColorRand = colores[colorRandom]
 
-let numeros = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
-let numerosRandom = Math.floor(Math.random()*numeros.length)
-let resultadoNumerosRand = numeros[numerosRandom]
+// let numeros = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
+// let numerosRandom = Math.floor(Math.random()*numeros.length)
+// let resultadoNumerosRand = numeros[numerosRandom]
 
-console.log(resultadoColorRand);
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
+let numerosRandom = Math.floor(Math.random()*50)
+// let resultadoNumerosRand = numeros[numerosRandom]
+console.log(numerosRandom)
 console.log(resultadoNumerosRand);
+console.log(resultadoColorRand);
+
 
 function tombola (color = resultadoColorRand, numero = resultadoNumerosRand){
     if (color === "rojo" || numero === 7){
